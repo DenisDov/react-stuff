@@ -23,7 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write \"src/*.js\"",
-    "format-code": "yarn run prettier && yarn run lint:fix"
+    "format-code": "yarn prettier && yarn lint:fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,7 +35,7 @@
     "not op_mini all"
   ],
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,jsx,json}": [
       "yarn run format-code",
       "git add"
     ]
